@@ -4,7 +4,7 @@ public class Decision {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		boolean answer = true;
+		boolean ans = true;
 
 		do {
 			Scanner scnr = new Scanner(System.in);
@@ -44,10 +44,10 @@ public class Decision {
 			String keep = scnr.next();
 
 			if (keep.equalsIgnoreCase("n")) {
-				answer = false;
+				ans = false;
 			}
 
-		} while (answer);
+		} while (ans);
 
 	}
 
