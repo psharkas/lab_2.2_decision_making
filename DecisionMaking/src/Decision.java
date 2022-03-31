@@ -4,39 +4,50 @@ public class Decision {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		boolean answer = true;
 
-		Scanner scnr = new Scanner(System.in);
-		System.out.println("Enter a number between 1 and 100.");
+		do {
+			Scanner scnr = new Scanner(System.in);
+			System.out.println("Enter a number between 1 and 100.");
 
-		int num = scnr.nextInt();
-		System.out.println(num);
+			int num = scnr.nextInt();
+			System.out.println(num);
 
-		if (num % 2 == 0) {
+			if (num % 2 == 0) {
 
-			if (num >= 2 && num <= 25) {
-				System.out.println("Even and less than or equal to 25.");
-			}
+				if (num >= 2 && num <= 25) {
+					System.out.println("Even and less than or equal to 25.");
+				}
 
-			else if (num >= 26 && num <= 60) {
-				System.out.println("Even.");
-			}
+				else if (num >= 26 && num <= 60) {
+					System.out.println("Even.");
+				}
 
-			else if (num > 60) {
-				System.out.println(num + " and Even.");
-			}
-		}
-
-		else {
-
-			if (num > 60) {
-				System.out.println(num + ", Odd and over 60.");
+				else if (num > 60) {
+					System.out.println(num + " and Even.");
+				}
 			}
 
 			else {
-				System.out.println(num + " and Odd.");
+
+				if (num > 60) {
+					System.out.println(num + ", Odd and over 60.");
+				}
+
+				else {
+					System.out.println(num + " and Odd.");
+				}
+
 			}
 
-		}
+			System.out.println("Keep going? y/n");
+			String keep = scnr.next();
+
+			if (keep.equalsIgnoreCase("n")) {
+				answer = false;
+			}
+
+		} while (answer);
 
 	}
 
